@@ -1,0 +1,52 @@
+@import url("reset.css");
+
+:root {
+    --clr-red: hsl(355, 88%, 58%);
+    --clr-green: hsl(79, 81%, 73%);
+    --clr-purple: hsl(242, 78%, 75%);
+
+    --clr-shortcuts: #FFDE4E;
+    --clr-components: #FF95C0;
+    --clr-variables: #EC5F46;
+    --clr-plugins: #5FC57F;
+
+    --clr-black: hsl(0, 0%, 0%);
+    --clr-gray-100: hsl(0, 0%, 10%);
+    --clr-gray-150: hsl(0, 0%, 15%);
+    --clr-gray-200: hsl(0, 0%, 20%);
+    --clr-gray-300: hsl(0, 0%, 30%);
+    --clr-gray-400: hsl(0, 0%, 40%);
+    --clr-gray-500: hsl(0, 0%, 50%);
+    --clr-gray-600: hsl(0, 0%, 60%);
+    --clr-gray-700: hsl(0, 0%, 70%);
+    --clr-gray-800: hsl(0, 0%, 80%);
+    --clr-gray-900: hsl(0, 0%, 90%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --clr-accent: var(--clr-green);
+    --clr-foreground: var(--clr-gray-800);
+    --clr-background: var(--clr-gray-100);
+
+    --ff-display: "Bricolage Grotesque";
+    --ff-sans: "Inter";
+    --ff-mono: "Spline Sans Mono";
+}
+
+body {
+    font-family: var(--ff-sans), system-ui, sans-serif;
+    color: var(--clr-foreground);
+    background-color: var(--clr-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-display), system-ui, sans-serif;
+}
+
+code {
+    font-family: var(--ff-mono), monospace;
+}

@@ -1,0 +1,477 @@
+---
+import Shortcut from '../components/Shortcut.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Shortcuts">
+  <main>
+    <h2>Shortcuts</h2>
+
+    <!--<p>Shortcuts are cool and mak</p>-->
+
+    <!--<p>⌥ Option ⌘ Command</p>-->
+    <section class="content">
+      <div class="category">
+        <h3>Tools</h3>
+        <div class="shortcuts">
+          <div class="shortcuts-header">
+            <div class="description">Description</div>
+            <div class="keys">Shortcut</div>
+          </div>
+
+          <Shortcut description="Move tool" keys={['V']} />
+          <Shortcut description="Scale tool" keys={['K']} />
+          <Shortcut
+            description="Frame tool"
+            keys={['F']}
+            conditional="or"
+            altKeys={['A']}
+          />
+          <Shortcut description="Section tool" keys={['Shift', 'S']} />
+          <Shortcut description="Pen tool" keys={['P']} />
+          <Shortcut description="Pencil tool" keys={['Shift', 'P']} />
+          <Shortcut description="Text tool" keys={['T']} />
+          <Shortcut description="Rectangle tool" keys={['R']} />
+          <Shortcut description="Ellipse tool" keys={['O']} />
+          <Shortcut description="Line tool" keys={['L']} />
+          <Shortcut description="Arrow tool" keys={['Shift', 'L']} />
+          <Shortcut description="Add comment" keys={['C']} />
+          <Shortcut description="Pick color" keys={['I']} />
+          <Shortcut description="Slice tool" keys={['S']} />
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>View</h3>
+        <div class="shortcuts">
+          <div class="shortcuts-header">
+            <div class="description">Description</div>
+            <div class="keys">Shortcut</div>
+          </div>
+
+          <Shortcut description="Show\\Hide UI" keys={['Ctrl', '\\']} />
+          <Shortcut
+            description="Show\\Hide UI (presentation mode)"
+            keys={['Ctrl', '\\']}
+            conditional="or"
+            altKeys={['.']}
+          />
+          <Shortcut
+            description="Show\\Hide left panel"
+            keys={['Ctrl', 'Shift', '\\']}
+          />
+          <Shortcut
+            description="Multiplayer cursors"
+            keys={['Ctrl', 'Alt', '\\']}
+          />
+          <Shortcut description="Open Dev Mode" keys={['Shift', 'D']} />
+          <Shortcut description="Rulers" keys={['Shift', 'R']} />
+          <Shortcut description="Show outlines" keys={['Ctrl', 'Shift', 'O']} />
+          <Shortcut description="Pixel preview" keys={['Ctrl', 'Shift', 'P']} />
+          <Shortcut description="Layout grids" keys={['Shift', 'G']} />
+          <Shortcut description="Pixel grid" keys={['Shift', "'"]} />
+          <Shortcut
+            description="Collapse all layers of current page"
+            keys={['Alt', 'L']}
+          />
+          <Shortcut description="Open layers panel" keys={['Alt', '1']} />
+          <Shortcut description="Show assets panel" keys={['Alt', '2']} />
+          <Shortcut description="Team library" keys={['Alt', '3']} />
+          <Shortcut description="Open design panel" keys={['Alt', '8']} />
+          <Shortcut description="Open prototype panel" keys={['Alt', '9']} />
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Zoom</h3>
+        <div class="shortcuts">
+          <div class="shortcuts-header">
+            <div class="description">Description</div>
+            <div class="keys">Shortcut</div>
+          </div>
+
+          <Shortcut description="Pan" keys={['Space', 'drag']} />
+          <Shortcut description="Zoom in" keys={['Ctrl', '+']} />
+          <Shortcut description="Zoom out" keys={['Ctrl', '-']} />
+          <Shortcut description="Zoom to 100%" keys={['Ctrl', '0']} />
+          <Shortcut description="Zoom to fit" keys={['Shift', '1']} />
+          <Shortcut description="Zoom to selection" keys={['Shift', '2']} />
+          <Shortcut description="Zoom to next frame" keys={['N']} />
+          <Shortcut
+            description="Zoom to previous frame"
+            keys={['Shift', 'N']}
+          />
+          <Shortcut description="Previous page" keys={['Page Up']} />
+          <Shortcut description="Next page" keys={['Page Down']} />
+          <Shortcut description="Find previous frame" keys={['Home']} />
+          <Shortcut description="Find next frame" keys={['End']} />
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Text</h3>
+        <div class="shortcuts">
+          <div class="shortcuts-header">
+            <div class="description">Description</div>
+            <div class="keys">Shortcut</div>
+          </div>
+
+          <Shortcut description="Bold" keys={['Ctrl', 'B']} />
+          <Shortcut description="Italic" keys={['Ctrl', 'I']} />
+          <Shortcut description="Underline" keys={['Ctrl', 'U']} />
+          <Shortcut description="Create link" keys={['Ctrl', 'K']} />
+          <Shortcut description="Strikethrough" keys={['Ctrl', 'Shift', 'X']} />
+          <Shortcut
+            description="Turn into a ordered list"
+            keys={['Ctrl', 'Shift', '7']}
+          />
+          <Shortcut
+            description="Turn into a unordered list"
+            keys={['Ctrl', 'Shift', '8']}
+          />
+          <Shortcut description="Text align left" keys={['Ctrl', 'Alt', 'L']} />
+          <Shortcut
+            description="Text align center"
+            keys={['Ctrl', 'Alt', 'T']}
+          />
+          <Shortcut
+            description="Text align right"
+            keys={['Ctrl', 'Alt', 'R']}
+          />
+          <Shortcut
+            description="Text align justified"
+            keys={['Ctrl', 'Alt', 'J']}
+          />
+          <Shortcut
+            description="Adjust font size"
+            keys={['Ctrl', 'Shift', '<']}
+            conditional="and"
+            altKeys={['>']}
+          />
+          <Shortcut
+            description="Adjust font weight"
+            keys={['Ctrl', 'Alt', '<']}
+            conditional="and"
+            altKeys={['>']}
+          />
+          <Shortcut
+            description="Adjust letter spacing"
+            keys={['Alt', '<']}
+            conditional="and"
+            altKeys={['>']}
+          />
+          <Shortcut
+            description="Adjust line height"
+            keys={['Alt', 'Shift', '<']}
+            conditional="and"
+            altKeys={['>']}
+          />
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Shape</h3>
+        <div class="shortcuts">
+          <div class="shortcuts-header">
+            <div class="description">Description</div>
+            <div class="keys">Shortcut</div>
+          </div>
+
+          <Shortcut description="Pen" keys={['P']} />
+          <Shortcut description="Pencil" keys={['Shift', 'P']} />
+
+          <div class="shortcuts-subheader">While editing a shape...</div>
+
+          <Shortcut description="Paint bucket" keys={['B']} />
+          <Shortcut description="Remove fill" keys={['Alt', '/']} />
+          <Shortcut description="Remove stroke" keys={['Shift', '/']} />
+          <Shortcut description="Swap fill and stroke" keys={['Shift', 'X']} />
+          <Shortcut description="Outline stroke" keys={['Ctrl', 'Alt', 'O']} />
+          <Shortcut description="Flatten selection" keys={['Ctrl', 'E']} />
+
+          <div class="shortcuts-subheader">After selecting points...</div>
+
+          <Shortcut description="Join selection" keys={['Ctrl', 'J']} />
+          <Shortcut
+            description="Delete and heal selection"
+            keys={['Shift', 'Backspace']}
+          />
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Selection</h3>
+        <div class="shortcuts">
+          <div class="shortcuts-header">
+            <div class="description">Description</div>
+            <div class="keys">Shortcut</div>
+          </div>
+
+          <Shortcut description="Select all" keys={['Ctrl', 'A']} />
+          <Shortcut
+            description="Select inverse"
+            keys={['Ctrl', 'Shift', 'A']}
+          />
+          <Shortcut description="Select none" keys={['Ctrl', 'Esc']} />
+          <Shortcut description="Deep select" keys={['Ctrl', 'click']} />
+          <Shortcut description="Select children" keys={['Enter']} />
+          <Shortcut description="Select parent" keys={['\\']} />
+          <Shortcut description="Select next sibling" keys={['Tab']} />
+          <Shortcut
+            description="Select previous sibling"
+            keys={['Shift', 'Tab']}
+          />
+          <Shortcut
+            description="Select matching layers"
+            keys={['Ctrl', 'Alt', 'A']}
+          />
+          <Shortcut description="Group selection" keys={['Ctrl', 'G']} />
+          <Shortcut
+            description="Ungroup selection"
+            keys={['Ctrl', 'Backspace']}
+          />
+          <Shortcut description="Frame selection" keys={['Ctrl', 'Alt', 'G']} />
+          <Shortcut
+            description="Show/Hide selection"
+            keys={['Ctrl', 'Shift', 'H']}
+          />
+          <Shortcut
+            description="Lock/Unlock selection"
+            keys={['Ctrl', 'Shift', 'L']}
+          />
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Cursor</h3>
+        <div class="shortcuts">
+          <div class="shortcuts-header">
+            <div class="description">Description</div>
+            <div class="keys">Shortcut</div>
+          </div>
+
+          <div class="shortcuts-subheader">While pointing...</div>
+          <Shortcut description="Measure to selection" keys={['Alt']} />
+
+          <div class="shortcuts-subheader">While moving...</div>
+          <Shortcut description="Measure to selection" keys={['Alt']} />
+
+          <div class="shortcuts-subheader">While clicking...</div>
+          <Shortcut description="Deep select" keys={['Ctrl', 'click']} />
+
+          <div class="shortcuts-subheader">While dragging to select...</div>
+          <Shortcut
+            description="Deep select within rectangle"
+            keys={['Ctrl', 'drag']}
+          />
+
+          <div class="shortcuts-subheader">While resizing...</div>
+          <Shortcut description="Resize from center" keys={['Ctrl', 'click']} />
+          <Shortcut
+            description="Resize propotionally"
+            keys={['Ctrl', 'click']}
+          />
+          <Shortcut description="Crop images" keys={['Ctrl']} />
+          <Shortcut description="Ignore frame constraints" keys={['Ctrl']} />
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Edit</h3>
+        <div class="shortcuts">
+          <div class="shortcuts-header">
+            <div class="description">Description</div>
+            <div class="keys">Shortcut</div>
+          </div>
+
+          <Shortcut description="Copy" keys={['Ctrl', 'C']} />
+          <Shortcut description="Cut" keys={['Ctrl', 'X']} />
+          <Shortcut description="Paste" keys={['Ctrl', 'V']} />
+          <Shortcut
+            description="Paste to replace"
+            keys={['Ctrl', 'Shift', 'R']}
+          />
+          <Shortcut
+            description="Paste over selection"
+            keys={['Ctrl', 'Shift', 'V']}
+          />
+          <Shortcut description="Duplicate" keys={['Ctrl', 'D']} />
+          <Shortcut description="Rename selection" keys={['Ctrl', 'R']} />
+          <Shortcut description="Export" keys={['Ctrl', 'Shift', 'E']} />
+          <Shortcut description="Find..." keys={['Ctrl', 'F']} />
+          <Shortcut description="Copy as PNG" keys={['Ctrl', 'Shift', 'C']} />
+          <Shortcut description="Copy properties" keys={['Ctrl', 'Alt', 'C']} />
+          <Shortcut
+            description="Paste properties"
+            keys={['Ctrl', 'Alt', 'V']}
+          />
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Transform</h3>
+        <div class="shortcuts">
+          <div class="shortcuts-header">
+            <div class="description">Description</div>
+            <div class="keys">Shortcut</div>
+          </div>
+
+          <Shortcut description="Flip horizontal" keys={['Shift', 'H']} />
+          <Shortcut description="Flip vertical" keys={['Shift', 'V']} />
+          <Shortcut description="Use as mask" keys={['Ctrl', 'Alt', 'M']} />
+          <Shortcut description="Edit shape or image" keys={['Enter']} />
+          <Shortcut
+            description="Place image..."
+            keys={['Ctrl', 'Shift', 'K']}
+          />
+          <Shortcut description="Set opacity to 0%" keys={['0', '0']} />
+          <Shortcut description="Set opacity to 10%" keys={['1']} />
+          <Shortcut description="Set opacity to 50%" keys={['5']} />
+          <Shortcut description="Set opacity to 100%" keys={['0']} />
+          <Shortcut
+            description="Set opacity to specific value"
+            keys={['enter number']}
+          />
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Arrange</h3>
+        <div class="shortcuts">
+          <div class="shortcuts-header">
+            <div class="description">Description</div>
+            <div class="keys">Shortcut</div>
+          </div>
+
+          <Shortcut description="Bring forward" keys={['Ctrl', ']']} />
+          <Shortcut description="Send backward" keys={['Ctrl', '[']} />
+          <Shortcut description="Bring to front" keys={[']']} />
+          <Shortcut description="Send to back" keys={['[']} />
+          <Shortcut description="Align top" keys={['Alt', 'W']} />
+          <Shortcut description="Align left" keys={['Alt', 'A']} />
+          <Shortcut description="Align bottom" keys={['Alt', 'S']} />
+          <Shortcut description="Align right" keys={['Alt', 'D']} />
+          <Shortcut
+            description="Align center horizontally"
+            keys={['Alt', 'H']}
+          />
+          <Shortcut description="Align center vertically" keys={['Alt', 'V']} />
+          <Shortcut
+            description="Distribute spacing horizontally"
+            keys={['Alt', 'Shift', 'H']}
+          />
+          <Shortcut
+            description="Distribute spacing vertically"
+            keys={['Alt', 'Shift', 'V']}
+          />
+          <Shortcut
+            description="Tidy up"
+            keys={['Ctrl', 'Alt', 'Shift', 'T']}
+          />
+          <Shortcut description="Add auto layout" keys={['Shift', 'A']} />
+          <Shortcut
+            description="Remove auto layout"
+            keys={['Alt', 'Shift', 'A']}
+          />
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Components</h3>
+        <div class="shortcuts">
+          <div class="shortcuts-header">
+            <div class="description">Description</div>
+            <div class="keys">Shortcut</div>
+          </div>
+
+          <Shortcut
+            description="Create component"
+            keys={['Ctrl', 'Alt', 'K']}
+          />
+          <Shortcut description="Detach instance" keys={['Ctrl', 'Alt', 'B']} />
+          <Shortcut description="Insert" keys={['Shift', 'I']} />
+
+          <div class="shortcuts-subheader">While inserting a component...</div>
+          <Shortcut description="Swap component instance" keys={['Alt']} />
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Others</h3>
+        <div class="shortcuts">
+          <div class="shortcuts-header">
+            <div class="description">Description</div>
+            <div class="keys">Shortcut</div>
+          </div>
+
+          <Shortcut
+            description="Quick actions..."
+            keys={['Ctrl', '/']}
+            conditional="or"
+            altKeys={['P']}
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  :root {
+    --gap: 2rem;
+    --columns: 2;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+  }
+
+  .category {
+    width: calc((100% - (var(--gap) * var(--columns))) / var(--columns));
+  }
+
+  .shortcuts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .shortcuts-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    //margin-bottom: 0.125rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-gray-150);
+    border-radius: 0.35rem;
+  }
+
+  .shortcuts-subheader {
+    background-color: hsla(0, 0%, 15%, 50%);
+    border: 0.125rem solid var(--clr-gray-150);
+    color: var(--clr-gray-500);
+    padding: 0.5rem 0.75rem;
+    margin: 0.5rem 0;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.02rem;
+    font-weight: 500;
+    border-radius: 0.35rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+  }
+
+  .keys {
+    display: flex;
+    gap: 0.25rem;
+  }
+</style>

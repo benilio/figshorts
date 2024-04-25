@@ -1,0 +1,12 @@
+---
+import { default as SearchBar } from 'astro-pagefind/components/Search'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Search">
+  <SearchBar
+    id="search"
+    className="pagefind-ui"
+    uiOptions={{ showImages: false }}
+  />
+</Layout>

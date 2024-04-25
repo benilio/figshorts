@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<main>
+  <h2>{title}</h2>
+
+  <p>Howdy..</p>
+
+  <iframe
+    src="https://giphy.com/embed/l3fZXnX7OsHuj9zDq"
+    width="480"
+    height="208"
+    class="giphy-embed"
+    allowFullScreen></iframe>
+  <p>
+    <a
+      href="https://giphy.com/gifs/starwars-star-wars-return-of-the-jedi-l3fZXnX7OsHuj9zDq"
+      ><!--via GIPHY--></a
+    >
+  </p>
+
+  <p>You've felt into a work in progress page, come back later!</p>
+</main>
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>

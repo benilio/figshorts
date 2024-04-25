@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+---
+
+<Layout>
+  <main>
+    <section class="hero">
+      <p>Hey, there! 👋</p>
+      <p>
+        My name's Beni and I'm a Figma addicted so I created this page to help
+        anyone that's interested in getting to know a little bit more of what
+        this powerful tool is capable of and has to offer.
+      </p>
+    </section>
+
+    <section class="content">
+      <Card
+        url="shortcuts"
+        title="Shortcuts"
+        description="Available shortcuts to get you faster where you need to!"
+        bgColor="#FFDE4E"
+        emoji="💪"
+        emojiDescription="Strong"
+      />
+      <Card
+        url="components"
+        title="Components"
+        description="Work smarter, not harder"
+        bgColor="#FF95C0"
+        emoji="🧠"
+        emojiDescription="Brain"
+      />
+      <Card
+        url="variables"
+        title="Variables"
+        description="What the hell are those & how to use them to your benefit"
+        bgColor="#EC5F46"
+        emoji="🤬"
+        emojiDescription="Cursing"
+      />
+      <Card
+        url="plugins"
+        title="Plugins"
+        description="A curated list of my favorite ones"
+        bgColor="#5FC57F"
+        emoji="👽"
+        emojiDescription="Alien"
+      />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    height: 48rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+</style>

@@ -1,0 +1,88 @@
+---
+interface Props {
+  description: string
+  keys: string[]
+  conditional?: string
+  altKeys?: string[]
+}
+
+const { description, keys, conditional, altKeys } = Astro.props
+---
+
+<div class="cell">
+  <div class="description">{description}</div>
+  <div class="keys">
+    {keys.map((key) => <kbd>{key}</kbd>)}
+
+    {
+      altKeys ? (
+        <>
+          <span class="keys-conditional">{conditional}</span>{' '}
+          {altKeys.map((key) => (
+            <kbd>{key}</kbd>
+          ))}
+        </>
+      ) : null
+    }
+  </div>
+</div>
+
+<style>
+  .cell {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin: 0.15rem 0;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 0.125rem solid transparent;
+    border-bottom: 0.125rem solid var(--clr-gray-150);
+  }
+
+  .cell:has(+ .shortcuts-subheader) {
+    border-bottom: 0.125rem solid transparent;
+  }
+
+  /*.cell:hover::after {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 2rem;
+              height: 2rem;
+              background-color: #5fc57f;
+            }*/
+
+  .cell:hover {
+    border-radius: 0.35rem;
+    background: var(--clr-shortcuts);
+    border-top: 0.125rem solid transparent;
+    border-bottom: 0.125rem solid transparent;
+  }
+
+  .cell:hover .description,
+  .cell:hover .keys-conditional {
+    color: var(--clr-gray-150);
+  }
+
+  .description {
+    font-size: 1.125rem;
+  }
+
+  .keys {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  kbd {
+    font-family: var(--ff-mono), monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    background-color: var(--clr-gray-200);
+    border-radius: 0.35rem;
+  }
+</style>
